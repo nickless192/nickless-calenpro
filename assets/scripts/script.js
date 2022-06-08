@@ -17,6 +17,13 @@ var loadTasks = function() {
             pm5: []
         }
     }
+
+    $.each(tasks, function(list, text) {
+        console.log(list, text);
+
+            // createTask(text, list);
+        })
+    
 }
 
 
@@ -41,12 +48,13 @@ $(".timeblock").on("click", ".description", function() {
     
 });
 
-var createTask = function(textareaEl) {
+var createTask = function(textareaEl,timeblock) {
     var text = textareaEl.val().trim();
     
     var taskEl = $("<p>").addClass("description").text(text);
 
     $(textareaEl).replaceWith(taskEl);
+    // tasks[timeblock].push(text);
 }
 
 $(".timeblock").on("click", ".saveBtn", function() {
@@ -60,14 +68,14 @@ $(".timeblock").on("click", ".saveBtn", function() {
     console.dir(textareaEl);
 
     if (textareaEl.length > 0) {
-        // var text = textareaEl.val().trim();
+        var text = textareaEl.val().trim();
     
         // var taskEl = $("<p>").addClass("description").text(text);
 
         // $(textareaEl).replaceWith(taskEl);
         createTask(textareaEl);
 
-        tasks[timeblock].push(text);
+        tasks[timeblock] =text ;
         saveTasks();
     }
 });
