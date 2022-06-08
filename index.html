@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,131 +30,129 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row" id="9am">
-        <div class="col-1 border-top border-right border-bottom">
-          <p class="text-right pt-1">9AM</p>
+      <div class="row timeblock" id="am9">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">9AM</p>
         </div>
         <div class="col-10 bg-light border-bottom border-white">
-          <p>
+          <p class="description"></p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
+      </div>
+
+      <div class="row timeblock" id="am10">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">10AM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
+      </div>
+
+      <div class="row timeblock" id="am11">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">11AM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
+      </div>
+
+      <div class="row timeblock" id="pm12">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">12PM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
+      </div>
+      
+      <div class="row timeblock" id="pm1">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">1PM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
+      </div>
+      
+      <div class="row timeblock" id="pm2">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">2PM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
+      </div>
+      
+      <div class="row timeblock" id="pm3">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">3PM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
 
           </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
       </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p></p>
+      
+      <div class="row timeblock" id="pm4">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">4PM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
       </div>
-    </div>
-
-    <div class="row" id="10am">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">10AM</p>
+      
+      <div class="row timeblock" id="pm5">
+        <div class="col-1 border-top border-right border-bottom d-flex align-items-center">
+          <p class="time-block">5PM</p>
+        </div>
+        <div class="col-10 bg-light border-bottom border-white">
+          <p class="description">
+            
+          </p>
+        </div>
+        <div class="saveBtn col-1 d-flex align-items-center border-bottom border-white">
+          <p class="text-center">Save</p>
+        </div>
       </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="11am">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">11AM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="12pm">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">12PM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="1pm">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">1PM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="2pm">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">2PM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="3pm">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">3PM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="4pm">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">4PM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
-
-    <div class="row" id="5pm">
-      <div class="col-1 border-top border-right border-bottom">
-        <p class="text-right pt-1">5PM</p>
-      </div>
-      <div class="col-10 bg-light border-bottom border-white">
-        <p>
-
-        </p>
-      </div>
-      <div class="col-1 bg-primary btn border-bottom border-white">
-        <p>Save task</p>
-      </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
