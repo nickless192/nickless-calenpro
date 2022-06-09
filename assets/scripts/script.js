@@ -19,9 +19,10 @@ var loadTasks = function() {
     }
 
     $.each(tasks, function(list, text) {
-        // use list to point to the correct timeblock, and set the text to the p element with class .description
-        // console.log(list, text);
-        $(`#${list}`).find(".description").text(text);
+        // select p element based on id and add text from localStorage
+        var taskEl = $(`#${list}`).find(".description");
+        taskEl.text(text);
+        auditTask(taskEl);
         })
     
 }
@@ -49,12 +50,13 @@ $(".timeblock").on("click", ".description", function() {
     
 });
 
-var createTask = function(textareaEl,timeblock) {
+var createTask = function(textareaEl) {
     var text = textareaEl.val().trim();
     
-    var taskEl = $("<p>").addClass("description").text(text);
+    var taskEl = $("<p>").addClass("description my-0").text(text);
 
     $(textareaEl).replaceWith(taskEl);
+    auditTask(taskEl);
     // tasks[timeblock].push(text);
 }
 
@@ -80,8 +82,34 @@ $(".timeblock").on("click", ".saveBtn", function() {
 
         tasks[timeblock] =text ;
         saveTasks();
+        
     }
 });
+
+var auditTask = function(taskEl) {
+    // obtain the time block text ex 9AM
+    var timeblock = $(taskEl).closest(".timeblock")
+    .find(".time-block").text().trim();
+
+    // then turn to moment() but its stripped of min and sec so
+    var timeblockMo = moment(timeblock, "hA");
+
+    // create currentTime moment() and strip it of min and sec so that comparisons below work
+    var currentTime = moment(moment().format("hA"), "hA");
+
+    // remove time-related classes
+    $(taskEl).removeClass("past present future");
+
+    // assigning proper class based on time comparison
+    if (timeblockMo.isAfter(currentTime)) {
+        $(taskEl).addClass("future");
+    } else if (timeblockMo.isBefore(currentTime)) {
+        $(taskEl).addClass("past");
+    } else if (timeblockMo.isSame(currentTime))  { 
+        $(taskEl).addClass("present");
+    }
+
+}
 
 var saveTasks = function() {
     localStorage.setItem("calenpro-tasks", JSON.stringify(tasks));
