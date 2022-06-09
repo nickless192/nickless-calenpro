@@ -23,7 +23,7 @@ textarea{
 
 .description{
   white-space: pre-wrap;
-  height: 3rem;
+  height: 4rem;
 }
 
 .time-block{
@@ -69,4 +69,6 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  /* color: #000000; */
+  cursor: pointer;
 }

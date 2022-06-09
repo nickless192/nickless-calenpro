@@ -24,3 +24,12 @@ WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
+
+## Screenshot of Deployed Site
+![Nickless CalenPro](./assets/images/HoriseonHeroScreenshot.png)
+
+## Links
+
+GitHub link: https://github.com/nickless192/HoriseonLandingPage
+
+Deployed Page: https://nickless192.github.io/HoriseonLandingPage/
