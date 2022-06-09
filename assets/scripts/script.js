@@ -19,24 +19,25 @@ var loadTasks = function() {
     }
 
     $.each(tasks, function(list, text) {
-        console.log(list, text);
-
-            // createTask(text, list);
+        // use list to point to the correct timeblock, and set the text to the p element with class .description
+        // console.log(list, text);
+        $(`#${list}`).find(".description").text(text);
         })
     
 }
 
 
 var assignDate = function() {
+    // create a p element with class lead and set text to current date
     var pEl = $("<p>").addClass("lead").attr("id", "currentDay").text(currentDate);
     $("#currentDay").replaceWith(pEl);
 }
 
+// handling the clicking on a p element to switch to textarea
 $(".timeblock").on("click", ".description", function() {
     // console.log(this);
     var text = $(this).text().trim();
-
-
+    // use the timeblock id as index around page
     var timeblock = $(this).closest(".timeblock").attr("id");
 
     var taskEl = $("<textarea>").addClass(`w-100 ${timeblock} edit-mode`).val(text);
@@ -62,11 +63,13 @@ $(".timeblock").on("click", ".saveBtn", function() {
 
     var timeblock = $(this).closest(".timeblock").attr("id");
     var timeblockEl = $(this).closest(".timeblock");
-    console.dir(timeblockEl);
+    // console.dir(timeblockEl);
 
     var textareaEl = $(timeblockEl).find(`.${timeblock}`);
-    console.dir(textareaEl);
+    // console.dir(textareaEl);
 
+    // if the textareaEl length is 0 it means there's no textarea at that moment
+    // if the textareaEl length is greater than 0 then there's textarea that needs to be saved to a p element
     if (textareaEl.length > 0) {
         var text = textareaEl.val().trim();
     
